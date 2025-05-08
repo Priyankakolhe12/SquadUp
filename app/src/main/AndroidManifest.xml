@@ -51,6 +51,10 @@
         <activity android:name=".TeamActivity" />
         <activity android:name=".UserProfileActivity" />
         <activity android:name=".MyEventsActivity" />
+        <activity android:name=".AddEventActivity"/>
+        <activity android:name=".CreateEventActivity"/>
+        <activity android:name=".EventDetailActivity"/>
+        <activity android:name=".MyTeamsActivity"/>
 
     </application>
 

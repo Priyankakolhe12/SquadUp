@@ -1,48 +1,63 @@
 package com.example.squadup;
 
-import java.util.List;
-
 public class Event {
-    private String eventId;
+    private String id; // Event ID for identifying the event uniquely
     private String title;
     private String description;
     private String date;
-    private String mode; // Online or Offline
-    private List<String> skillsRequired;
-    private String eventLink;
-    private String platform;
-    private String lastDateToRegister;
-    private String notes;
-    private String posterUrl;
+    private String imageUrl;
 
     public Event() {
+        // Required empty constructor for Firebase
     }
 
-    public Event(String eventId, String title, String description, String date, String mode,
-                 List<String> skillsRequired, String eventLink, String platform,
-                 String lastDateToRegister, String notes, String posterUrl) {
-        this.eventId = eventId;
+    public Event(String id, String title, String description, String date, String imageUrl) {
+        this.id = id;
         this.title = title;
         this.description = description;
         this.date = date;
-        this.mode = mode;
-        this.skillsRequired = skillsRequired;
-        this.eventLink = eventLink;
-        this.platform = platform;
-        this.lastDateToRegister = lastDateToRegister;
-        this.notes = notes;
-        this.posterUrl = posterUrl;
+        this.imageUrl = imageUrl;
     }
 
-    public String getEventId() { return eventId; }
-    public String getTitle() { return title; }
-    public String getDescription() { return description; }
-    public String getDate() { return date; }
-    public String getMode() { return mode; }
-    public List<String> getSkillsRequired() { return skillsRequired; }
-    public String getEventLink() { return eventLink; }
-    public String getPlatform() { return platform; }
-    public String getLastDateToRegister() { return lastDateToRegister; }
-    public String getNotes() { return notes; }
-    public String getPosterUrl() { return posterUrl; }
+    // Getter and Setter for event ID
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    // Getters and Setters for other fields
+    public String getTitle() {
+        return title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
 }

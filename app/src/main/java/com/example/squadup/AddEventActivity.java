@@ -1,54 +1,70 @@
 package com.example.squadup;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
 public class AddEventActivity extends AppCompatActivity {
 
-    private EditText etTitle, etDescription, etDate, etMode, etSkills, etLink, etCollege, etLastDate, etNotes;
-    private Button btnCreateEvent;
+    private EditText etTitle, etDescription, etDate, etImageUrl;
+    private Button btnAddEvent;
+    private FirebaseFirestore db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_event);
 
-        etTitle = findViewById(R.id.etTitle);
-        etDescription = findViewById(R.id.etDescription);
-        etDate = findViewById(R.id.etDate);
-        etMode = findViewById(R.id.etMode);
-        etSkills = findViewById(R.id.etSkills);
-        etLink = findViewById(R.id.etLink);
-        etCollege = findViewById(R.id.etCollege);
-        etLastDate = findViewById(R.id.etLastDate);
-        etNotes = findViewById(R.id.etNotes);
-        btnCreateEvent = findViewById(R.id.btnCreateEvent);
+        etTitle = findViewById(R.id.etEventTitle);
+        etDescription = findViewById(R.id.etEventDescription);
+        etDate = findViewById(R.id.etEventDate);
+        etImageUrl = findViewById(R.id.etEventImageUrl);
+        btnAddEvent = findViewById(R.id.btnAddEvent);
 
-        btnCreateEvent.setOnClickListener(v -> createEvent());
+        db = FirebaseFirestore.getInstance();
+
+        etDate.setOnClickListener(v -> showDatePicker());
+
+        btnAddEvent.setOnClickListener(v -> addEventToFirestore());
     }
 
-    private void createEvent() {
+    private void showDatePicker() {
+        final Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+        DatePickerDialog datePickerDialog = new DatePickerDialog(
+                this,
+                (view, year1, month1, dayOfMonth) -> {
+                    String selectedDate = year1 + "-" + (month1 + 1) + "-" + dayOfMonth;
+                    etDate.setText(selectedDate);
+                },
+                year, month, day
+        );
+        datePickerDialog.show();
+    }
+
+    private void addEventToFirestore() {
         String title = etTitle.getText().toString().trim();
         String description = etDescription.getText().toString().trim();
         String date = etDate.getText().toString().trim();
-        String mode = etMode.getText().toString().trim();
-        String skills = etSkills.getText().toString().trim();
-        String link = etLink.getText().toString().trim();
-        String college = etCollege.getText().toString().trim();
-        String lastDate = etLastDate.getText().toString().trim();
-        String notes = etNotes.getText().toString().trim();
+        String imageUrl = etImageUrl.getText().toString().trim();
 
-        if (title.isEmpty() || description.isEmpty() || date.isEmpty() || mode.isEmpty()) {
-            Toast.makeText(this, "Please fill all required fields!", Toast.LENGTH_SHORT).show();
+        if (title.isEmpty() || description.isEmpty() || date.isEmpty()) {
+            Toast.makeText(this, "Please fill in all required fields", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -56,22 +72,13 @@ public class AddEventActivity extends AppCompatActivity {
         event.put("title", title);
         event.put("description", description);
         event.put("date", date);
-        event.put("mode", mode);
-        event.put("skills", skills);
-        event.put("link", link);
-        event.put("college", college);
-        event.put("lastDate", lastDate);
-        event.put("notes", notes);
+        event.put("imageUrl", imageUrl);
 
-        FirebaseDatabase.getInstance().getReference("Events")
-                .push()
-                .setValue(event)
-                .addOnSuccessListener(aVoid -> {
-                    Toast.makeText(this, "Event Created Successfully 🚀", Toast.LENGTH_SHORT).show();
-                    finish(); // go back to event list
-                })
-                .addOnFailureListener(e -> {
-                    Toast.makeText(this, "Failed to create event!", Toast.LENGTH_SHORT).show();
-                });
+        db.collection("events")
+                .add(event)
+                .addOnSuccessListener(documentReference ->
+                        Toast.makeText(this, "Event added!", Toast.LENGTH_SHORT).show())
+                .addOnFailureListener(e ->
+                        Toast.makeText(this, "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show());
     }
 }
