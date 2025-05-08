@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="4dp"
+    android:padding="12dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgEvent"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_event" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event Title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="@android:color/white"
+            android:padding="4dp"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:id="@+id/txtCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:background="@android:color/white"
+            android:textSize="14sp"
+            android:layout_below="@id/txtTitle"
+            android:padding="4dp"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date &amp; Time"
+            android:textSize="14sp"
+            android:layout_below="@id/txtCategory"
+            android:background="@android:color/white"
+            android:padding="4dp"
+            android:layout_margin="8dp"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

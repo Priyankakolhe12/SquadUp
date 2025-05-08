@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <!-- Profile Image -->
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/img_1"
+            android:background="@drawable/profile_circle_bg"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Role -->
+        <TextView
+            android:id="@+id/txtRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Role"
+            android:textSize="18sp"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- College -->
+        <TextView
+            android:id="@+id/txtCollege"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="College"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- Degree and Year -->
+        <TextView
+            android:id="@+id/txtDegreeYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Degree - Year"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- Bio -->
+        <TextView
+            android:id="@+id/txtBio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bio"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Skills -->
+        <TextView
+            android:id="@+id/txtSkills"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Skills"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Strengths -->
+        <TextView
+            android:id="@+id/txtStrengths"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Strengths"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Preferred Roles -->
+        <TextView
+            android:id="@+id/txtPreferredRoles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Preferred Roles"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Preferred Events -->
+        <TextView
+            android:id="@+id/txtPreferredEvents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Preferred Events"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Previous Events -->
+        <TextView
+            android:id="@+id/txtPreviousEvents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Previous Events"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Achievements -->
+        <TextView
+            android:id="@+id/txtAchievements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Achievements"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Availability -->
+        <TextView
+            android:id="@+id/txtAvailability"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Availability"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Github -->
+        <TextView
+            android:id="@+id/txtGithub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GitHub Link"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- LinkedIn -->
+        <TextView
+            android:id="@+id/txtLinkedIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LinkedIn Link"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- Portfolio -->
+        <TextView
+            android:id="@+id/txtPortfolio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Portfolio Link"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Invite Button -->
+        <Button
+            android:id="@+id/btnInvite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send Invite 🚀"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="8dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

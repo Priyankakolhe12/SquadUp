@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple">#7A5FFF</color>
+    <color name="purple_500">#7A5FFF</color> <!-- Main SquadUp purple -->
+    <color name="purple_700">#5A3FFF</color> <!-- Darker purple -->
+    <color name="teal_200">#03DAC5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="grey">#888888</color>
+    <color name="red">#F44336</color> <!-- For Reject buttons -->
+    <color name="green">#4CAF50</color> <!-- For Accept buttons -->
+    <color name="bottom_nav_selected">#7A5FFF</color> <!-- Selected tab -->
+    <color name="bottom_nav_unselected">#999999</color> <!-- Unselected tab -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="light_background">#F5F5F5</color>
+</resources>

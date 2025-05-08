@@ -1,0 +1,9 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:gravity="center">
+        <bitmap
+            android:src="@mipmap/logo"
+            android:gravity="center"
+            android:width="66dp"
+            android:height="66dp"/>
+    </item>
+</layer-list>

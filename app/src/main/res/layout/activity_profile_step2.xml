@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complete Your Profile"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2/3"
+            android:textSize="14sp"
+            android:textColor="#8A2BE2"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Social Links -->
+        <EditText
+            android:id="@+id/editLinkedIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="LinkedIn profile"
+            android:inputType="textUri"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/editGithub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="GitHub link"
+            android:inputType="textUri"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/editPortfolio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Portfolio link"
+            android:inputType="textUri"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Achievements -->
+        <EditText
+            android:id="@+id/editAchievements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Achievements"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Skills with tags -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select your skills"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tagReact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="React"
+                android:padding="8dp"
+                android:background="@drawable/tag_bg"
+                android:textColor="#7A5FFF"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tagPython"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Python"
+                android:padding="8dp"
+                android:background="@drawable/tag_bg"
+                android:textColor="#7A5FFF"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tagUIUX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UI/UX"
+                android:padding="8dp"
+                android:background="@drawable/tag_bg"
+                android:textColor="#7A5FFF" />
+        </LinearLayout>
+
+        <!-- Optional Add More button (currently inactive) -->
+
+        <LinearLayout
+            android:id="@+id/skillsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnAddMoreSkills"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ Add more"
+            android:backgroundTint="#EEEEEE"
+            android:textColor="#000000"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Continue Button -->
+        <Button
+            android:id="@+id/btnContinue2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Continue"
+            android:backgroundTint="#7A5FFF"
+            android:textColor="@android:color/white"
+            android:padding="14dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>

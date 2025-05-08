@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp"
+    android:backgroundTint="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/eventImage"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_1"
+            android:background="@drawable/profile_circle_bg"/>
+
+        <TextView
+            android:id="@+id/eventTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/eventImage"
+            android:layout_marginTop="8dp"
+            android:text="Event Title"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/eventCollege"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/eventTitle"
+            android:text="College/Platform"
+            android:textSize="14sp"
+            android:textColor="#666666"/>
+
+        <TextView
+            android:id="@+id/eventDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/eventCollege"
+            android:text="Date"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="2dp"/>
+
+        <TextView
+            android:id="@+id/eventMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/eventDate"
+            android:text="Mode"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="2dp"/>
+
+        <Button
+            android:id="@+id/viewDetailsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Details"
+            android:layout_below="@id/eventMode"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            android:id="@+id/lookingForTeamButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Looking for Team"
+            android:layout_below="@id/viewDetailsButton"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@android:color/white"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

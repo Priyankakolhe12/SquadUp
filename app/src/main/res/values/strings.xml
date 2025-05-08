@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">SquadUp</string>
+    <string name="default_web_client_id">149113392276-8veea1q3mc2a353u9fv45u86nfd91cvt.apps.googleusercontent.com</string>
+    <string-array name="skills_array">
+        <item>All Skills</item>
+        <item>React</item>
+        <item>Python</item>
+        <item>ML</item>
+        <item>UI/UX</item>
+    </string-array>
+    <string name="profile_image">Profile Image</string>
+    <string-array name="roles_array">
+        <item>All Roles</item>
+        <item>Developer</item>
+        <item>Designer</item>
+        <item>Manager</item>
+    </string-array>
+    <style name="UserProfileText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#444</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+    <string-array name="event_modes">
+        <item>Online</item>
+        <item>Offline</item>
+        <item>Hybrid</item>
+    </string-array>
+    <style name="FeatureButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:backgroundTint">#7A5FFF</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+        <string name="edit_profile">Edit Profile</string>
+        <string name="notifications">Notifications</string>
+        <string name="user_name">User Name</string>
+        <string name="user_role">Role</string>
+        <string name="search_hint">Search by name, role, skill...</string>
+
+
+</resources>

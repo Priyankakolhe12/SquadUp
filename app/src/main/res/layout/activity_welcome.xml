@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/background"
+    android:padding="24dp">
+
+    <!-- Logo Image -->
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+        android:contentDescription="Logo"
+        android:layout_marginTop="60dp" />
+
+    <!-- App Name -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SquadUp"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="16dp" />
+
+    <!-- Tagline -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connect. Collaborate. Conquer."
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Continue with Google Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/googleBtn"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginBottom="16dp"
+        android:text="Continue with Google"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:icon="@drawable/img"
+        app:iconGravity="textStart"
+        app:iconPadding="12dp"
+        app:iconTint="@null"
+        android:backgroundTint="#FFFFFF"/>
+
+
+    <!-- Sign Up with Email Button -->
+    <Button
+        android:id="@+id/emailBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign up with Email"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:backgroundTint="#7A5FFF" />
+
+    <!-- Log In Text -->
+    <TextView
+        android:id="@+id/loginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an account? Log in"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp" />
+</LinearLayout>

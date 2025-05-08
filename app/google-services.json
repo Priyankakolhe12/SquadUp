@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "149113392276",
+    "project_id": "squadup-115b6",
+    "storage_bucket": "squadup-115b6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:149113392276:android:fa9556dc223ae47ac07881",
+        "android_client_info": {
+          "package_name": "com.example.squadup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "149113392276-8veea1q3mc2a353u9fv45u86nfd91cvt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.squadup",
+            "certificate_hash": "206fb6811463d67b5c1233f856cedab545020995"
+          }
+        },
+        {
+          "client_id": "149113392276-kvpeer9fe1bacfokimsv8b3umrv50jif.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGK2Lup09ECQPCkKjAFQOEaF6a8X1irkQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "149113392276-kvpeer9fe1bacfokimsv8b3umrv50jif.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complete Your Profile"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3/3"
+            android:textSize="14sp"
+            android:textColor="#8A2BE2"
+            android:layout_marginBottom="24dp" />
+
+        <EditText
+            android:id="@+id/editPreferredEvents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Preferred events"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/editPreferredRoles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Preferred Roles"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/editAvailability"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Availability for events"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Previous Events"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:id="@+id/previousEventsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <Button
+            android:id="@+id/btnAddMorePreviousEvents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ Add more"
+            android:backgroundTint="#EEEEEE"
+            android:textColor="#000000"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Strengths"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:id="@+id/strengthsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnAddMoreStrengths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ Add more"
+            android:backgroundTint="#EEEEEE"
+            android:textColor="#000000"
+            android:layout_marginBottom="24dp" />
+
+
+        <Button
+            android:id="@+id/btnFinish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Finish"
+            android:backgroundTint="#7A5FFF"
+            android:textColor="@android:color/white"
+            android:padding="14dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>
