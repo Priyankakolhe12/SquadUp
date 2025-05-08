@@ -26,7 +26,7 @@
         </service>
 
         <activity
-            android:name=".WelcomeActivity"
+            android:name=".LauncherActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,7 +34,7 @@
             </intent-filter>
         </activity>
 
-
+        <activity android:name=".WelcomeActivity" />
         <activity android:name=".ChatActivity" />
         <activity android:name=".CreateTeamActivity" />
         <activity android:name=".EventListActivity" />
